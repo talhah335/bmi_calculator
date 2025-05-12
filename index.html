@@ -14,30 +14,35 @@
             <h1>BMI Calculator</h1>
         </div>
         
-        <div class="tab">
-            <button class="tablinks" onclick="openMode(event, 'Metric')" id="defaultOpen">Metric</button>
-            <button class="tablinks" onclick="openMode(event, 'Imperial')">Imperial</button>
-        </div>
+        <div class = "content">
+            <div class = "table">
+                <div class="tab">
+                    <button class="tablinks" onclick="openMode(event, 'Metric')" id="defaultOpen">Metric</button>
+                    <button class="tablinks" onclick="openMode(event, 'Imperial')">Imperial</button>
+                </div>
           
-        <div id="Metric" class="tabcontent">
-            <p>Height (cm)</p>
-            <input type="text" id="metric-height" />
-            <p>Weight (kg)</p>
-            <input type="text" id="metric-weight" />
-            <button id="metric-btn" style="margin: 8px 0;">Calculate</button>
-            <div id="metric-result"></div>
-        </div>
+                <div id="Metric" class="tabcontent">
+                    <p>Height (cm)</p>
+                    <input type="text" id="metric-height" />
+                    <p>Weight (kg)</p>
+                    <input type="text" id="metric-weight" />
+                    <button id="metric-btn">Calculate</button>
+                </div>
           
-        <div id="Imperial" class="tabcontent">
-            <p>Height (in)</p>
-            <input type="text" id="imperial-height" />
-            <p>Weight (lbs)</p>
-            <input type="text" id="imperial-weight" />
-            <button id="imperial-btn" style="margin: 8px 0;">Calculate</button>
-            <div id="imperial-result"></div>
+                <div id="Imperial" class="tabcontent">
+                    <p>Height (in)</p>
+                    <input type="text" id="imperial-height" />
+                    <p>Weight (lbs)</p>
+                    <input type="text" id="imperial-weight" />
+                    <button id="imperial-btn">Calculate</button>
+                </div>
+            </div>
+
+            <div class = "text-container">
+                <p id="result-text"></p>
+            </div>
         </div>
 
-        <p>Healthy BMI range: 18.5 - 25 </p>
     </div>
     <script src="app.js"></script>
 </body>

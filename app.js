@@ -6,22 +6,23 @@ window.onload = () => {
 };
 
 function calculateBMI(mode) {
-    let height, weight, result;
+    let height, weight, resultText;
+
+    // Get the result container
+    resultText = document.querySelector("#result-text");
 
     if (mode === "Metric") {
         height = parseInt(document.querySelector("#metric-height").value);
         weight = parseInt(document.querySelector("#metric-weight").value);
-        result = document.querySelector("#metric-result");
     } else if (mode === "Imperial") {
         height = parseInt(document.querySelector("#imperial-height").value);
         weight = parseInt(document.querySelector("#imperial-weight").value);
-        result = document.querySelector("#imperial-result");
     }
 
     if (!height || isNaN(height)) {
-        result.innerHTML = "Provide a valid Height!";
+        resultText.innerHTML = "Provide a valid Height!";
     } else if (!weight || isNaN(weight)) {
-        result.innerHTML = "Provide a valid Weight!";
+        resultText.innerHTML = "Provide a valid Weight!";
     } else {
         let bmi;
         if (mode === "Metric") {
@@ -31,11 +32,11 @@ function calculateBMI(mode) {
         }
 
         if (bmi < 18.5) {
-            result.innerHTML = `Under Weight : <span>${bmi}</span>`;
+            resultText.innerHTML = `Under Weight : <span>${bmi}</span>`;
         } else if (bmi >= 18.5 && bmi < 25) {
-            result.innerHTML = `Normal Weight : <span>${bmi}</span>`;
+            resultText.innerHTML = `Normal Weight : <span>${bmi}</span>`;
         } else {
-            result.innerHTML = `Over Weight : <span>${bmi}</span>`;
+            resultText.innerHTML = `Over Weight : <span>${bmi}</span>`;
         }
     }
 }

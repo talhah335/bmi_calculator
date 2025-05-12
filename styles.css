@@ -27,28 +27,33 @@ p {
     font-family: 'serif', Georgia, serif;
     font-size: 16px;
 }
-/* Style the tab */
+.table {
+    flex: 2;
+}
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #dadada;
     display: flex;
     justify-content: center;
-    width: 100%;
-  }
+    width: 100%; /* Ensure it spans the full width */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    box-sizing: border-box; /* Include border in width calculation */
+}
   
   /* Style the buttons that are used to open the tab content */
   .tab button {
     flex: 1;
-    width: 50%;
     font-size: 16px;
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 20px;
     transition: 0.3s;
+    margin: 0; /* Remove any margin */
+    box-sizing: border-box; /* Include padding in width calculation */
   }
   
   /* Change background color of buttons on hover */
@@ -68,6 +73,9 @@ p {
     border: 1px solid #ccc;
     border-top: none;
     background-color: white;
+    width: 100%; /* Match the width of the .tab */
+    margin: 0; /* Remove any margin */
+    box-sizing: border-box; /* Include border in width calculation */
   }
 
   input {
@@ -79,3 +87,24 @@ p {
     border-radius: 4px;
     background-color: #feffed;
   }
+
+.text-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#result-text {
+  font-family: 'serif', Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #660033;
+}
