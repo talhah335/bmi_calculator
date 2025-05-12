@@ -5,23 +5,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="background-color: rgb(244, 255, 244)">
+<body>
     <div class="container">
-        <h1>BMI Calculator</h1>
+        <div class="header">
+            <h1>BMI Calculator</h1>
+        </div>
+        
+        <div class="tab">
+            <button class="tablinks" onclick="openMode(event, 'Metric')" id="defaultOpen">Metric</button>
+            <button class="tablinks" onclick="openMode(event, 'Imperial')">Imperial</button>
+        </div>
+          
+        <div id="Metric" class="tabcontent">
+            <p>Height (cm)</p>
+            <input type="text" id="metric-height" />
+            <p>Weight (kg)</p>
+            <input type="text" id="metric-weight" />
+            <button id="metric-btn" style="margin: 8px 0;">Calculate</button>
+            <div id="metric-result"></div>
+        </div>
+          
+        <div id="Imperial" class="tabcontent">
+            <p>Height (in)</p>
+            <input type="text" id="imperial-height" />
+            <p>Weight (lbs)</p>
+            <input type="text" id="imperial-weight" />
+            <button id="imperial-btn" style="margin: 8px 0;">Calculate</button>
+            <div id="imperial-result"></div>
+        </div>
 
-        <p>Height (in cm)</p>
-
-        <input type="text" id="height" />
-
-        <p>Weight (in kg)</p>
-
-        <input type="text" id="weight" />
-
-        <button id="btn">Calculate</button>
-
-        <div id="result"></div>
+        <p>Healthy BMI range: 18.5 - 25 </p>
     </div>
     <script src="app.js"></script>
 </body>
